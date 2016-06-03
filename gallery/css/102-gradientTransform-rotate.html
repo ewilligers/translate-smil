@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #rg { animation: anim0 3.5s linear; }
+@keyframes anim0 { 0% { gradientTransform: rotate(0deg); } 25% { gradientTransform: rotate(180deg); } 50% { gradientTransform: rotate(0deg); } 75% { gradientTransform: rotate(90deg); } 100% { gradientTransform: rotate(180deg); } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <g>
+    <!-- Direct translation is ineffective: gradient-transform is not a CSS property. -->
+    <radialGradient cx="20" cy="30" fx="0" fy="0" gradientTransform="rotate(0)" gradientUnits="userSpaceOnUse" id="rg" r="160">
+     <stop offset="0" stop-color="black">
+     </stop>
+     <stop offset="1" stop-color="rgb(255,165,0)">
+     </stop>
+    </radialGradient>
+    <rect fill="url(#rg)" height="60" width="160" x="20" y="20">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

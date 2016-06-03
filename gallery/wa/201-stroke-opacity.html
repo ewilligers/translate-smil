@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { strokeOpacity: "0.99" }, { strokeOpacity: "0.2" }, { strokeOpacity: "0.99" } ], { duration: 3000, fill: "forwards", iterations: 3 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect fill="none" height="20" id="bar" stroke="blue" stroke-dasharray="5, 10" stroke-width="2" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

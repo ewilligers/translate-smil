@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("text0").animate([ { wordSpacing: "0px" }, { wordSpacing: "100px" } ], { duration: 80000, fill: "forwards", iterations: 0.05 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <text fill="blue" id="text0" x="20" y="20">
+    word spacing
+   </text>
+  </svg>
+ </body>
+</html>

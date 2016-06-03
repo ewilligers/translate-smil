@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #bar { animation: anim 3.6s linear 2; }
+@keyframes anim { 0% { transform: skewY(60deg); } 25% { transform: skewY(-30deg); } 50% { transform: skewY(0deg); } 75% { transform: skewY(30deg); } 100% { transform: skewY(-60deg); } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

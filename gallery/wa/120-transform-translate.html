@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { transform: "translate(0px, 0px)" }, { transform: "translate(-200000px, 200000px)" } ], 7.982e+06); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+    <!-- Full-clock-val is valid SMIL but not supported by Blink. -->
+   </rect>
+  </svg>
+ </body>
+</html>

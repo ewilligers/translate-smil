@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { transform: "scale(0.5, 1.5)" }, { transform: "scale(1.5, 0.5)" } ], { duration: 1000, iterations: 3 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

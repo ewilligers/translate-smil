@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #hatch { animation: anim0 3.5s linear; }
+@keyframes anim0 { 0% { patternTransform: rotate(0deg); } 50% { patternTransform: rotate(15deg); } 100% { patternTransform: rotate(0deg); } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <pattern height="8" id="hatch" patternContentUnits="userSpaceOnUse" patternUnits="userSpaceOnUse" width="8" x="0" y="0">
+    <rect fill="green" height="4" stroke="none" width="4" x="3" y="3">
+    </rect>
+   </pattern>
+   <rect fill="url(#hatch)" height="20" width="80" x="60" y="40">
+   </rect>
+   <rect fill="blue" height="20" width="80" x="60" y="60">
+   </rect>
+  </svg>
+ </body>
+</html>

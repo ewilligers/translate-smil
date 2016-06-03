@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="100">
+  <g>
+    <defs>
+      <radialGradient id="circles" gradientUnits="userSpaceOnUse"
+                      cx="110" cy="45" r="40">
+        <stop id="s0" offset="0%" stop-color="blue">
+          <animate id="anim" attributeName="stop-opacity" attributeType="xml"
+                   values="1;0.2;0.8;0;0.8;0.2;1" dur="4s" repeatDur="8000ms" />
+        </stop>
+        <stop id="s1" offset="100%" stop-color="red" />
+      </radialGradient>
+    </defs>
+    <rect fill="url(#circles)" stroke="none"  
+          x="0" y="0" width="200" height="100"/>
+  </g>
+</svg>
+</html>

@@ -1,0 +1,6 @@
+#! /bin/sh
+
+pep8 translate-smil/*.py && \
+python -m translate-smil --frame gallery/smil gallery/frame && \
+python -m translate-smil --css gallery/smil gallery/css && \
+python -m translate-smil --wa gallery/smil gallery/wa

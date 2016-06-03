@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { strokeDashoffset: "0%" }, { strokeDashoffset: "75%" } ], { duration: 2000, fill: "forwards", iterations: 3 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" stroke="blue" stroke-dasharray="5, 10" stroke-width="2" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

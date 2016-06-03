@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("path0").animate([ { d: "path('M 10 10 L 100 10 L 190 10 L 190 50 L 190 90 L 100 90 L 10 90 L 10 50 Z')" }, { d: "path('M 10 10 L 100 40 L 190 10 L 150 50 L 190 90 L 100 60 L 10 90 L 50 50 Z')" } ], { duration: 4000, delay: 1000, iterations: Infinity }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <path d="M 10 10 L 100 10 L 190 10 L 190 50 L 190 90 L 100 90 L 10 90 L 10 50 Z" fill="none" id="path0" stroke="blue" stroke-width="3">
+    <!-- https://svgwg.org/svg2-draft/paths.html#DProperty -->
+   </path>
+  </svg>
+ </body>
+</html>

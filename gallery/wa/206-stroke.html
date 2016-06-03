@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { stroke: "rgba(255,0,0,1)" }, { stroke: "rgba(0,255,255,0.3)" }, { stroke: "rgba(0,255,0,1)" }, { stroke: "rgba(255,0,255,0.3)" }, { stroke: "rgba(0,0,255,1)" }, { stroke: "rgba(255,255,0,0.3)" }, { stroke: "rgba(255,0,0,1)" } ], 6000); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect fill="none" height="20" id="bar" stroke="red" stroke-width="14" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

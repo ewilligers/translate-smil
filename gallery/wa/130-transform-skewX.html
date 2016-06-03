@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { transform: "skewX(60deg)" }, { transform: "skewX(-60deg)" } ], { duration: 3000, delay: 1200, iterations: 2 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

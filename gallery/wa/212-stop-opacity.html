@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("s0").animate([ { stopOpacity: "1" }, { stopOpacity: "0.2" }, { stopOpacity: "0.8" }, { stopOpacity: "0" }, { stopOpacity: "0.8" }, { stopOpacity: "0.2" }, { stopOpacity: "1" } ], { duration: 4000, iterations: 2 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <g>
+    <defs>
+     <radialGradient cx="110" cy="45" gradientUnits="userSpaceOnUse" id="circles" r="40">
+      <stop id="s0" offset="0%" stop-color="blue">
+      </stop>
+      <stop id="s1" offset="100%" stop-color="red">
+      </stop>
+     </radialGradient>
+    </defs>
+    <rect fill="url(#circles)" height="100" stroke="none" width="200" x="0" y="0">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

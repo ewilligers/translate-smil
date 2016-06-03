@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #s1 { animation: anim 4s linear 2 forwards; }
+@keyframes anim { 0% { stop-color: green; } 100% { stop-color: orange; } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <g>
+    <defs>
+     <radialGradient cx="110" cy="45" gradientUnits="userSpaceOnUse" id="circles" r="40">
+      <stop id="s0" offset="0%" stop-color="red">
+      </stop>
+      <stop id="s1" offset="90%" stop-color="blue">
+      </stop>
+      <stop id="s2" offset="100%" stop-color="red">
+      </stop>
+     </radialGradient>
+    </defs>
+    <rect fill="url(#circles)" height="100" stroke="none" width="200" x="0" y="0">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("hatch").animate([ { patterntransform: "rotate(0deg)" }, { patterntransform: "rotate(15deg)" }, { patterntransform: "rotate(0deg)" } ], 3500); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <pattern height="8" id="hatch" patternContentUnits="userSpaceOnUse" patternUnits="userSpaceOnUse" width="8" x="0" y="0">
+    <rect fill="green" height="4" stroke="none" width="4" x="3" y="3">
+    </rect>
+   </pattern>
+   <rect fill="url(#hatch)" height="20" width="80" x="60" y="40">
+   </rect>
+   <rect fill="blue" height="20" width="80" x="60" y="60">
+   </rect>
+  </svg>
+ </body>
+</html>

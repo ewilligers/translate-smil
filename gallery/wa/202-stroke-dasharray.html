@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { strokeDasharray: "5, 10" }, { strokeDasharray: "14, 1" }, { strokeDasharray: "5, 10" } ], { duration: 4000, iterations: Infinity }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" stroke="blue" stroke-dasharray="5, 10" stroke-width="2" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

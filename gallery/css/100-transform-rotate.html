@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #bar { animation: anim 4s linear; }
+@keyframes anim { 0% { transform: translate(100px, 50px) rotate(0deg) translate(-100px, -50px); } 100% { transform: translate(100px, 50px) rotate(360deg) translate(-100px, -50px); } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

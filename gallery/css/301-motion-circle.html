@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #path0 { motion-path: path("M20,50 C 20,10 80,10 80,50"); motion-rotation: auto; }
+#path0 { animation: anim0 6s linear infinite; }
+@keyframes anim0 { 0% { motion-offset: 0%; } 100% { motion-offset: 100%; } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <path d="M20,50 C 20,10 80,10 80,50" fill="none" id="arc" stroke="cyan" stroke-width="2">
+   </path>
+   <path d="M-4,-3 L4,-3 L 0,-14 z" fill="red" id="path0" stroke="none">
+   </path>
+  </svg>
+ </body>
+</html>

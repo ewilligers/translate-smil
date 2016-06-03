@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #bar { animation: anim 2s linear 3 forwards; }
+@keyframes anim { 0% { stroke-dashoffset: 0%; } 100% { stroke-dashoffset: 75%; } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" stroke="blue" stroke-dasharray="5, 10" stroke-width="2" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

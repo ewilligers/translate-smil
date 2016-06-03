@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("bar").animate([ { transform: "translate(100px, 50px) rotate(0deg) translate(-100px, -50px)" }, { transform: "translate(100px, 50px) rotate(360deg) translate(-100px, -50px)" } ], 4000); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+   </rect>
+  </svg>
+ </body>
+</html>

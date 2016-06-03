@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #bar { animation: anim 7.982e+06ms linear; }
+@keyframes anim { 0% { transform: translate(0px, 0px); } 100% { transform: translate(-200000px, 200000px); } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" width="200">
+   <rect height="20" id="bar" width="80" x="60" y="40">
+    <!-- Full-clock-val is valid SMIL but not supported by Blink. -->
+   </rect>
+  </svg>
+ </body>
+</html>
