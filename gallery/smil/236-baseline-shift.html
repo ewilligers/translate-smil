@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <text x="60" y="60" font-family="Verdana" font-size="12">
+    <tspan baseline-shift="baseline">
+      one
+    </tspan>
+    <!-- See crbug.com/620618 - the animation of three but not two is visible. -->
+    <tspan id="two" baseline-shift="baseline">
+      two
+      <animate attributeType="CSS" attributeName="baseline-shift"
+      from="sub" to="super" begin="2s" dur="4s" />
+    </tspan>
+    <tspan id="three" baseline-shift="baseline">
+      three
+      <animate attributeType="CSS" attributeName="baseline-shift"
+      from="sub" to="super" begin="2s" dur="4s" />
+      <animate attributeType="CSS" attributeName="stroke"
+      from="red" to="blue" begin="2s" dur="4s" />
+    </tspan>
+    <tspan baseline-shift="baseline">
+      four
+    </tspan>
+  </text>
+</svg>
+</html>

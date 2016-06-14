@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+  
+#line0 { animation: anim0 4s linear 2s forwards; }
+@keyframes anim0 { 0% { stroke-linecap: round; } 100% { stroke-linecap: square; } }
+   </style>
+   <g>
+    <line class="thick" id="line0" stroke-linecap="butt" x1="50" x2="150" y1="60" y2="60">
+    </line>
+    <line class="thin" x1="50" x2="150" y1="60" y2="60">
+    </line>
+   </g>
+  </svg>
+ </body>
+</html>

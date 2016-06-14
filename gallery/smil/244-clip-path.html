@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <g clip-rule="nonzero">
+    <clipPath id="first">
+      <path d="M5,10 L165,80 L165,40 L5,110 L185,110 L185,10 Z" clip-rule="nonzero" />
+    </clipPath>
+    <clipPath id="second">
+      <path d="M15,10 L175,80 L175,40 L15,110 L195,110 L195,10 Z" clip-rule="evenodd" />
+    </clipPath>
+    <rect fill="blue" left="0" top="0" width="200" height="120">
+      <animate id="anim" attributeName="clip-path" attributeType="CSS"
+               from="url(#first)" to="url(#second)" begin="2s" dur="4s" />
+    </rect>
+  </g>
+</svg>
+</html>

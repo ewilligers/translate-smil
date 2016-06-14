@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("message").animate([ { textAnchor: "middle" }, { textAnchor: "start" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text fill="blue" font-size="17" id="message" text-anchor="end" transform="rotate(11)" x="110" y="60">
+    Descending
+   </text>
+  </svg>
+ </body>
+</html>

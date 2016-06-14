@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+
+  <filter id="light" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+    <feFlood in="SourceAlpha" flood-color="lime"
+             result="floodOut">
+      <animate id="anim" attributeName="flood-opacity" attributeType="CSS"
+               from="0.95" to="0.05" begin="2s" dur="4s" />
+      <fePointLight x="-1000" y="-2000" z="3000"/>
+    </feSpecularLighting>
+    <feMerge>
+      <feMergeNode in="floodOut"/>
+    </feMerge>
+  </filter>
+
+  <rect x="10" y="10" width="180" height="100" fill="#888888" />
+  <g filter="url(#light)">
+      <path fill="#D90000"
+            d="M20,20 h160 v80 h-160 z" />
+  </g>
+</svg>
+</html>

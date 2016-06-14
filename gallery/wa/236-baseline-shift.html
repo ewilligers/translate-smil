@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("two").animate([ { baselineShift: "sub" }, { baselineShift: "super" } ], { duration: 4000, delay: 2000 }); };
+window.onload = function() { document.getElementById("three").animate([ { baselineShift: "sub" }, { baselineShift: "super" } ], { duration: 4000, delay: 2000 }); };
+window.onload = function() { document.getElementById("three").animate([ { stroke: "red" }, { stroke: "blue" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text font-family="Verdana" font-size="12" x="60" y="60">
+    <tspan baseline-shift="baseline">
+     one
+    </tspan>
+    <!-- See crbug.com/620618 - the animation of three but not two is visible. -->
+    <tspan baseline-shift="baseline" id="two">
+     two
+    </tspan>
+    <tspan baseline-shift="baseline" id="three">
+     three
+    </tspan>
+    <tspan baseline-shift="baseline">
+     four
+    </tspan>
+   </text>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #two { animation: anim0 4s linear 2s; }
+@keyframes anim0 { 0% { dominant-baseline: ideographic; } 100% { dominant-baseline: hanging; } }
+#three { animation: anim1 4s linear 2s; }
+@keyframes anim1 { 0% { dominant-baseline: ideographic; } 100% { dominant-baseline: hanging; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text font-family="Verdana" font-size="12" x="60" y="60">
+    <tspan dominant-baseline="alphabetic">
+     one
+    </tspan>
+    <tspan dominant-baseline="alphabetic" id="two">
+     two
+    </tspan>
+    <tspan dominant-baseline="alphabetic" id="three">
+     three
+    </tspan>
+    <tspan dominant-baseline="alphabetic">
+     four
+    </tspan>
+   </text>
+  </svg>
+ </body>
+</html>

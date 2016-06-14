@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("e").animate([ { pointerEvents: "none" }, { pointerEvents: "visibleStroke" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <ellipse cx="100" cy="60" fill="none" id="e" pointer-events="visibleFill" rx="50" ry="30" stroke="cyan" stroke-width="10">
+   </ellipse>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<svg id="picture" width="200" height="120">
+  <animate attributeName="color-interpolation" attributeType="CSS"
+           values="sRGB;linearRGB" dur="12s" repeatCount="indefinite" />
+  <rect id="bar" x="60" y="40" width="80" height="40" stroke="none">
+    <animate attributeName="fill" attributeType="CSS"
+             dur="6s" repeatCount="indefinite"
+             values="rgba(255,0,0,1);rgba(0,255,255,0.3);rgba(0,255,0,1);rgba(255,0,255,0.3);rgba(0,0,255,1);rgba(255,255,0,0.3);rgba(255,0,0,1)" />
+  </rect>
+  <!-- getComputedStyle(document.getElementById('picture'))['color-interpolation'] -->
+</svg>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #rect0 { animation: anim 4s linear 2; }
+@keyframes anim { 0% { filter: url(#blur); } 100% { filter: none; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <filter id="blur">
+     <feGaussianBlur in="SourceGraphic" stdDeviation="50">
+     </feGaussianBlur>
+    </filter>
+   </defs>
+   <g>
+    <rect fill="blue" filter="url(#blur)" height="120" id="rect0" stroke="none" width="200" x="0" y="0">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

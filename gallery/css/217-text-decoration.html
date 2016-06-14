@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #message { animation: anim0 4s linear 2s forwards; }
+@keyframes anim0 { 0% { text-decoration: line-through; } 100% { text-decoration: underline; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <!-- crbug.com/620037
+  The overline remains visible when text-decoration is animated using CSS Animations or Web Animations.
+  -->
+   <text fill="blue" font-size="37" id="message" text-decoration="overline" transform="rotate(11)" x="40" y="60">
+    Descending
+   </text>
+  </svg>
+ </body>
+</html>

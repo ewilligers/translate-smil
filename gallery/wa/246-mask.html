@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("rect0").animate([ { mask: "url(#mask1)" }, { mask: "url(#mask2)" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <mask height="100" id="mask1" width="100" x="0" y="0">
+     <rect fill="#ffffff" height="50" stroke="none" width="100" x="0" y="0">
+     </rect>
+    </mask>
+    <mask height="100" id="mask2" width="100" x="0" y="0">
+     <rect fill="#ffffff" height="50" stroke="none" width="100" x="0" y="50">
+     </rect>
+    </mask>
+   </defs>
+   <rect fill="#0000ff" height="100" id="rect0" mask="url(#mask1)" stroke="none" width="100" x="0" y="0">
+   </rect>
+  </svg>
+ </body>
+</html>

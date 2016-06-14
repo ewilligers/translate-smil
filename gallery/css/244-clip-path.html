@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #rect0 { animation: anim 4s linear 2s; }
+@keyframes anim { 0% { clip-path: url(#first); } 100% { clip-path: url(#second); } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <g clip-rule="nonzero">
+    <clipPath id="first">
+     <path clip-rule="nonzero" d="M5,10 L165,80 L165,40 L5,110 L185,110 L185,10 Z">
+     </path>
+    </clipPath>
+    <clipPath id="second">
+     <path clip-rule="evenodd" d="M15,10 L175,80 L175,40 L15,110 L195,110 L195,10 Z">
+     </path>
+    </clipPath>
+    <rect fill="blue" height="120" id="rect0" left="0" top="0" width="200">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

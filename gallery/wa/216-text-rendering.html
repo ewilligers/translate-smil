@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("message").animate([ { textRendering: "optimizeSpeed" }, { textRendering: "optimizeLegibility" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text fill="blue" font-size="37" id="message" text-rendering="geometricPrecision" transform="rotate(11)" x="40" y="60">
+    Descending
+   </text>
+  </svg>
+ </body>
+</html>

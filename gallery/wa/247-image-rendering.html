@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   svg {
+      image-rendering: auto;
+    }
+  </style>
+  <script>
+   window.onload = function() { document.getElementById("picture").animate([ { imageRendering: "pixelated" }, { imageRendering: "auto" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" id="picture" width="200">
+   <!-- Blink also supports -webkit-optimize-contrast -->
+  </svg>
+  <!-- getComputedStyle(document.getElementById('picture'))['image-rendering'] -->
+ </body>
+</html>

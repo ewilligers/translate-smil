@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <text x="60" y="60" font-family="Verdana" font-size="12">
+    <tspan alignment-baseline="baseline">
+      one
+    </tspan>
+    <!-- See crbug.com/620618 - the animation of three but not two is visible. -->
+    <tspan id="two" alignment-baseline="ideographic">
+      two
+      <animate attributeType="CSS" attributeName="alignment-baseline"
+      from="baseline" to="hanging" begin="2s" dur="4s" />
+    </tspan>
+    <tspan id="three" alignment-baseline="ideographic">
+      three
+      <animate attributeType="CSS" attributeName="alignment-baseline"
+      from="baseline" to="hanging" begin="2s" dur="4s" />
+      <animate attributeType="CSS" attributeName="stroke"
+      from="red" to="blue" begin="2s" dur="4s" />
+    </tspan>
+    <tspan alignment-baseline="hanging">
+      four
+    </tspan>
+  </text>
+</svg>
+</html>

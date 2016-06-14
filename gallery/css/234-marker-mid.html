@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #polyline0 { animation: anim0 4s linear; }
+@keyframes anim0 { 0% { marker-mid: url(#square); } 100% { marker-mid: url(#circle); } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <marker id="square" markerHeight="12" markerWidth="12" orient="auto" refX="6" refY="6">
+     <path d="M 6,1 L 11,6 6,11 1,6 z" fill="blue">
+     </path>
+    </marker>
+    <marker id="circle" markerHeight="12" markerWidth="12" orient="auto" refX="6" refY="6">
+     <circle cx="6" cy="6" fill="red" r="5">
+     </circle>
+    </marker>
+   </defs>
+   <polyline fill="none" id="polyline0" points="20,20
+                    180,40
+                    20,60
+                    180,80
+                    20,100" stroke="black" stroke-width="2">
+   </polyline>
+  </svg>
+ </body>
+</html>

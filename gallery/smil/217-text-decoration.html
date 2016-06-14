@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <!-- crbug.com/620037
+  The overline remains visible when text-decoration is animated using CSS Animations or Web Animations.
+  -->
+  <text id="message" x="40" y="60" fill="blue" font-size="37" transform="rotate(11)" text-decoration="overline">Descending
+    <animate attributeType="CSS" attributeName="text-decoration"
+      from="line-through" to="underline" begin="2s" dur="4s" fill="freeze" />
+  </text>
+</svg>
+</html>
