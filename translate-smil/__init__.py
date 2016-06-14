@@ -33,6 +33,13 @@ def quit_unsupported(feature):
          '" is not currently supported by translate-smil.')
 
 
+def split_semicolon_delimited(value):
+    segments = map(lambda str: str.strip(), re.split(';', value))
+    if segments[-1] == '':
+        segments = segments[:-1]
+    return segments
+
+
 def transform_to_css(transform_type, value):
     if transform_type == 'rotate':
         rotation = re.split(',| ', value)
@@ -201,9 +208,8 @@ def translate_soup(soup, mode):
                 motion_path = ('path(\"M' + animation_element['from'] +
                                ' L' + animation_element['to'] + '\")')
             if animation_element.has_attr('values'):
-                segments = re.split(';', animation_element['values'].strip())
-                if segments[-1] == '':
-                    segments = segments[:-1]
+                segments = split_semicolon_delimited(
+                    animation_element['values'])
                 if len(segments) < 2:
                     quit_unsupported('less than 2 values')
                 motion_path = 'path(\"M' + ' L'.join(segments) + '\")'
@@ -246,9 +252,7 @@ def translate_soup(soup, mode):
         elif animation_element.name == 'animateMotion':
             values = ['0%', '100%']
         elif animation_element.has_attr('values'):
-            values = re.split(';', animation_element['values'].strip())
-            if values[-1] == '':
-                values = values[:-1]
+            values = split_semicolon_delimited(animation_element['values'])
             if len(values) < 2:
                 quit_unsupported('less than 2 values')
             values = map(lambda s: s.strip(), values)
@@ -260,9 +264,8 @@ def translate_soup(soup, mode):
             quit_unsupported('animation element without from/to or values')
 
         if animation_element.has_attr('keyTimes'):
-            key_times = re.split(';', animation_element['keyTimes'].strip())
-            if key_times[-1] == '':
-                key_times = key_times[:-1]
+            key_times = split_semicolon_delimited(
+                animation_element['keyTimes'])
             if len(key_times) < 2:
                 quit_unsupported('less than 2 keyTimes')
             key_times = map(float, key_times)
