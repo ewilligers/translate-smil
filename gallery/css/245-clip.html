@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   svg {
+      overflow: visible;
+      position: absolute;
+    }
+  
+#clip1 { animation: anim0 4s linear 2s; }
+@keyframes anim0 { 0% { clip: rect(-5px,-5px,-5px,-5px); } 100% { clip: auto; } }
+  </style>
+ </head>
+ <body>
+  <svg height="100" id="clip1" viewBox="0 0 100 100" width="100">
+   <path d="M220 50 L10 10 L10 90 Z" fill="blue">
+   </path>
+  </svg>
+ </body>
+</html>

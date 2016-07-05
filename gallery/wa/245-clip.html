@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   svg {
+      overflow: visible;
+      position: absolute;
+    }
+  </style>
+  <script>
+   window.onload = function() { document.getElementById("clip1").animate([ { clip: "rect(-5px,-5px,-5px,-5px)" }, { clip: "auto" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="100" id="clip1" viewBox="0 0 100 100" width="100">
+   <path d="M220 50 L10 10 L10 90 Z" fill="blue">
+   </path>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("line0").animate([ { markerEnd: "url(#square)" }, { markerEnd: "url(#circle)" } ], 4000); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <marker id="square" markerHeight="12" markerWidth="12" orient="auto" refX="6" refY="6">
+     <path d="M 6,1 L 11,6 6,11 1,6 z" fill="blue">
+     </path>
+    </marker>
+    <marker id="circle" markerHeight="12" markerWidth="12" orient="auto" refX="6" refY="6">
+     <circle cx="6" cy="6" fill="red" r="5">
+     </circle>
+    </marker>
+   </defs>
+   <line id="line0" stroke="black" stroke-width="2" x1="20" x2="180" y1="60" y2="60">
+   </line>
+  </svg>
+ </body>
+</html>

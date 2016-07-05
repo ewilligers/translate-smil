@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #feFlood0 { animation: anim 4s linear 2s; }
+@keyframes anim { 0% { flood-color: red; } 100% { flood-color: yellow; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <filter filterUnits="userSpaceOnUse" height="120" id="light" width="200" x="0" y="0">
+    <feFlood flood-color="lime" id="feFlood0" in="SourceAlpha" result="floodOut">
+     <fePointLight x="-1000" y="-2000" z="3000">
+     </fePointLight>
+     <feMerge>
+      <feMergeNode in="floodOut">
+      </feMergeNode>
+     </feMerge>
+    </feFlood>
+   </filter>
+   <rect fill="#888888" height="100" width="180" x="10" y="10">
+   </rect>
+   <g filter="url(#light)">
+    <path d="M20,20 h160 v80 h-160 z" fill="#D90000">
+    </path>
+   </g>
+  </svg>
+ </body>
+</html>

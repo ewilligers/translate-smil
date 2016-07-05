@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #feSpecularLighting0 { animation: anim 4s linear 2s; }
+@keyframes anim { 0% { lighting-color: red; } 100% { lighting-color: yellow; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <filter filterUnits="userSpaceOnUse" height="120" id="light" width="200" x="0" y="0">
+    <feSpecularLighting id="feSpecularLighting0" in="SourceAlpha" lighting-color="lime" result="specOut" specularConstant=".5" specularExponent="30" surfaceScale="3">
+     <fePointLight x="-1000" y="-2000" z="3000">
+     </fePointLight>
+    </feSpecularLighting>
+    <feMerge>
+     <feMergeNode in="specOut">
+     </feMergeNode>
+    </feMerge>
+   </filter>
+   <rect fill="#888888" height="100" width="180" x="10" y="10">
+   </rect>
+   <g filter="url(#light)">
+    <path d="M20,20 h160 v80 h-160 z" fill="#D90000">
+    </path>
+   </g>
+  </svg>
+ </body>
+</html>

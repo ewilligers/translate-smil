@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+  
+#path0 { animation: anim0 4s linear 2s forwards; }
+@keyframes anim0 { 0% { stroke-linejoin: round; } 100% { stroke-linejoin: bevel; } }
+   </style>
+   <g>
+    <path class="thick" d="M 50 150 L 100 50 L 150 150" id="path0" stroke-linejoin="miter">
+    </path>
+    <path class="thin" d="M 50 150 L 100 50 L 150 150">
+    </path>
+   </g>
+  </svg>
+ </body>
+</html>

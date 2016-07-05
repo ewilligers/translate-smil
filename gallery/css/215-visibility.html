@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #tspan0 { animation: anim0 4s linear 2s forwards; }
+@keyframes anim0 { 0% { visibility: visible; } 100% { visibility: collapse; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <path d="M 80 90 L 100 50 L 150 150" id="elbow">
+    </path>
+   </defs>
+   <text fill="blue" font-family="Verdana" font-size="9">
+    <textPath xlink:href="#elbow">
+     <tspan>
+      One
+     </tspan>
+     <tspan id="tspan0" visibility="hidden">
+      Two
+     </tspan>
+     <tspan>
+      Three
+     </tspan>
+    </textPath>
+   </text>
+  </svg>
+ </body>
+</html>

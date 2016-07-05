@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("two").animate([ { dominantBaseline: "ideographic" }, { dominantBaseline: "hanging" } ], { duration: 4000, delay: 2000 }); };
+window.onload = function() { document.getElementById("three").animate([ { dominantBaseline: "ideographic" }, { dominantBaseline: "hanging" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text font-family="Verdana" font-size="12" x="60" y="60">
+    <tspan dominant-baseline="alphabetic">
+     one
+    </tspan>
+    <tspan dominant-baseline="alphabetic" id="two">
+     two
+    </tspan>
+    <tspan dominant-baseline="alphabetic" id="three">
+     three
+    </tspan>
+    <tspan dominant-baseline="alphabetic">
+     four
+    </tspan>
+   </text>
+  </svg>
+ </body>
+</html>

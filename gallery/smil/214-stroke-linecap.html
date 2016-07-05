@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+  </style>
+  <g>
+    <line class="thick" x1="50" x2="150" y1="60" y2="60" stroke-linecap="butt">
+      <animate attributeType="CSS" attributeName="stroke-linecap"
+        from="round" to="square" begin="2s" dur="4s" fill="freeze" />
+    </line>
+    <line class="thin" x1="50" x2="150" y1="60" y2="60" />
+  </g>
+</svg>
+</html>

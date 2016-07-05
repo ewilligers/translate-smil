@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("path0").animate([ { strokeLinejoin: "round" }, { strokeLinejoin: "bevel" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+   </style>
+   <g>
+    <path class="thick" d="M 50 150 L 100 50 L 150 150" id="path0" stroke-linejoin="miter">
+    </path>
+    <path class="thin" d="M 50 150 L 100 50 L 150 150">
+    </path>
+   </g>
+  </svg>
+ </body>
+</html>

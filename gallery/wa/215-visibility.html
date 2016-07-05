@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("tspan0").animate([ { visibility: "visible" }, { visibility: "collapse" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <path d="M 80 90 L 100 50 L 150 150" id="elbow">
+    </path>
+   </defs>
+   <text fill="blue" font-family="Verdana" font-size="9">
+    <textPath xlink:href="#elbow">
+     <tspan>
+      One
+     </tspan>
+     <tspan id="tspan0" visibility="hidden">
+      Two
+     </tspan>
+     <tspan>
+      Three
+     </tspan>
+    </textPath>
+   </text>
+  </svg>
+ </body>
+</html>

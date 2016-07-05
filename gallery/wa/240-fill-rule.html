@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("polygon0").animate([ { fillRule: "nonzero" }, { fillRule: "evenodd" } ], { duration: 4000, delay: 2000 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <polygon fill="blue" id="polygon0" points="10,10 170,80 170,40 10,110 190,110 190,10">
+   </polygon>
+  </svg>
+ </body>
+</html>

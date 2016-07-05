@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <svg width="200" height="120"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="lg"
+        x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0.2" stop-color="#F00" />
+        <stop offset="0.8" stop-color="#0FF" />
+      </linearGradient>
+      <filter id="f">
+        <animate attributeName="color-interpolation-filters" attributeType="CSS"
+                 values="sRGB;linearRGB" dur="2s" repeatCount="indefinite" />
+        <feColorMatrix in="SourceGraphic"
+          type="hueRotate" values="90">
+        </feColorMatrix>
+      </filter>
+    </defs>
+    <text x="5" y="10" font-size="12px" font-weight="bold"
+          fill="url(#lg)" filter="url(#f)">
+      color-interpolation-filters
+    </text>
+    <text x="5" y="50" font-size="12px" font-weight="bold"
+          fill="url(#lg)" filter="url(#f)">
+      color-interpolation-filters
+      <animate attributeName="x" attributeType="XML"
+               values="5;5" dur="2s" repeatCount="indefinite" />
+    </text>
+  </svg>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+  </style>
+  <g>
+    <path class="thick" d="M 50 150 L 100 50 L 150 150" stroke-linejoin="miter">
+      <animate attributeType="CSS" attributeName="stroke-linejoin"
+        from="round" to="bevel" begin="2s" dur="4s" fill="freeze" />
+    </path>
+    <path class="thin" d="M 50 150 L 100 50 L 150 150" />
+  </g>
+</svg>
+</html>

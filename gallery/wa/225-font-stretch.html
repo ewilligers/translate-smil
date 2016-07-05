@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("msg").animate([ { fontStretch: "normal" }, { fontStretch: "expanded" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text fill="blue" font-family="Verdana" font-size="30" font-stretch="condensed" id="msg" x="100" y="60">
+    Hello
+   </text>
+  </svg>
+ </body>
+</html>

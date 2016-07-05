@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <defs>
+    <path id="elbow" d="M 80 90 L 100 50 L 150 150" />
+  </defs>
+  <text font-family="Verdana" font-size="9" fill="blue">
+    <textPath xlink:href="#elbow">
+      <tspan>
+        One
+      </tspan>
+      <tspan visibility="hidden">
+        Two
+        <animate attributeType="CSS" attributeName="visibility"
+        from="visible" to="collapse" begin="2s" dur="4s" fill="freeze" />
+      </tspan>
+      <tspan>
+        Three
+      </tspan>
+    </textPath>
+  </text>
+</svg>
+</html>

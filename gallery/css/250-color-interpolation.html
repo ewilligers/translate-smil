@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #picture { animation: anim0 12s linear infinite; }
+@keyframes anim0 { 0% { color-interpolation: sRGB; } 100% { color-interpolation: linearRGB; } }
+#bar { animation: anim1 6s linear infinite; }
+@keyframes anim1 { 0% { fill: rgba(255,0,0,1); } 16.6667% { fill: rgba(0,255,255,0.3); } 33.3333% { fill: rgba(0,255,0,1); } 50% { fill: rgba(255,0,255,0.3); } 66.6667% { fill: rgba(0,0,255,1); } 83.3333% { fill: rgba(255,255,0,0.3); } 100% { fill: rgba(255,0,0,1); } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" id="picture" width="200">
+   <rect height="40" id="bar" stroke="none" width="80" x="60" y="40">
+   </rect>
+   <!-- getComputedStyle(document.getElementById('picture'))['color-interpolation'] -->
+  </svg>
+ </body>
+</html>

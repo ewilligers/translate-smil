@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("line0").animate([ { strokeLinecap: "round" }, { strokeLinecap: "square" } ], { duration: 4000, delay: 2000, fill: "forwards" }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <style>
+    .thick { stroke: blue; stroke-width: 40; fill: none; }
+    .thin { stroke: red; stroke-width: 8; fill: none; }
+   </style>
+   <g>
+    <line class="thick" id="line0" stroke-linecap="butt" x1="50" x2="150" y1="60" y2="60">
+    </line>
+    <line class="thin" x1="50" x2="150" y1="60" y2="60">
+    </line>
+   </g>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("rect0").animate([ { filter: "url(#blur)" }, { filter: "none" } ], { duration: 4000, iterations: 2 }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <defs>
+    <filter id="blur">
+     <feGaussianBlur in="SourceGraphic" stdDeviation="50">
+     </feGaussianBlur>
+    </filter>
+   </defs>
+   <g>
+    <rect fill="blue" filter="url(#blur)" height="120" id="rect0" stroke="none" width="200" x="0" y="0">
+    </rect>
+   </g>
+  </svg>
+ </body>
+</html>

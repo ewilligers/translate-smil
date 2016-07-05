@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <defs>
+    <marker id="square" markerWidth="12" markerHeight="12"
+    refX="6" refY="6" orient="auto">
+      <path d="M 6,1 L 11,6 6,11 1,6 z" fill="blue"/>
+    </marker>
+    <marker id="circle" markerWidth="12" markerHeight="12"
+    refX="6" refY="6" orient="auto">
+      <circle cx="6" cy="6" r="5" fill="red"/>
+    </marker>
+  </defs>
+  <polyline fill="none" stroke="black" stroke-width="2"
+            points="20,20
+                    180,40
+                    20,60
+                    180,80
+                    20,100">
+    <animate attributeType="CSS" attributeName="marker-mid"
+      from="url(#square)" to="url(#circle)" dur="4s" />
+  </polyline>
+</svg>
+</html>

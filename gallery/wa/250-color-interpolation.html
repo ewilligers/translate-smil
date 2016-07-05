@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   window.onload = function() { document.getElementById("picture").animate([ { colorInterpolation: "sRGB" }, { colorInterpolation: "linearRGB" } ], { duration: 12000, iterations: Infinity }); };
+window.onload = function() { document.getElementById("bar").animate([ { fill: "rgba(255,0,0,1)" }, { fill: "rgba(0,255,255,0.3)" }, { fill: "rgba(0,255,0,1)" }, { fill: "rgba(255,0,255,0.3)" }, { fill: "rgba(0,0,255,1)" }, { fill: "rgba(255,255,0,0.3)" }, { fill: "rgba(255,0,0,1)" } ], { duration: 6000, iterations: Infinity }); };
+  </script>
+ </head>
+ <body>
+  <svg height="120" id="picture" width="200">
+   <rect height="40" id="bar" stroke="none" width="80" x="60" y="40">
+   </rect>
+   <!-- getComputedStyle(document.getElementById('picture'))['color-interpolation'] -->
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="50" />
+    </filter>
+  </defs>
+  <g>
+    <rect fill="blue" stroke="none" filter="url(#blur)"
+          x="0" y="0" width="200" height="120">
+      <animate id="anim" attributeName="filter" attributeType="xml"
+               values="url(#blur);none" dur="4s" repeatDur="8000ms" />
+    </rect>
+  </g>
+</svg>
+</html>

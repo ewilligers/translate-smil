@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   #two { animation: anim0 4s linear 2s; }
+@keyframes anim0 { 0% { alignment-baseline: baseline; } 100% { alignment-baseline: hanging; } }
+#three { animation: anim1 4s linear 2s; }
+@keyframes anim1 { 0% { alignment-baseline: baseline; } 100% { alignment-baseline: hanging; } }
+#three { animation: anim2 4s linear 2s; }
+@keyframes anim2 { 0% { stroke: red; } 100% { stroke: blue; } }
+  </style>
+ </head>
+ <body>
+  <svg height="120" width="200">
+   <text font-family="Verdana" font-size="12" x="60" y="60">
+    <tspan alignment-baseline="baseline">
+     one
+    </tspan>
+    <!-- See crbug.com/620618 - the animation of three but not two is visible. -->
+    <tspan alignment-baseline="ideographic" id="two">
+     two
+    </tspan>
+    <tspan alignment-baseline="ideographic" id="three">
+     three
+    </tspan>
+    <tspan alignment-baseline="hanging">
+     four
+    </tspan>
+   </text>
+  </svg>
+ </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<svg width="200" height="120">
+  <g clip-rule="nonzero">
+    <clipPath id="cp">
+      <path d="M10,10 L170,80 L170,40 L10,110 L190,110 L190,10 Z">
+        <animate id="anim" attributeName="clip-rule" attributeType="CSS"
+                 from="nonzero" to="evenodd" begin="2s" dur="4s" />
+      </path>
+    </clipPath>
+    <rect fill="blue" clip-path="url(#cp)" left="0" top="0" width="200" height="120" />
+  </g>
+</svg>
+</html>
